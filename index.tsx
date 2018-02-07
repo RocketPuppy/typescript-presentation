@@ -30,7 +30,6 @@ const answerer: Answerer = {
 
 const question: Question = {
   id: 1,
-  votes: [],
   text: "How many roads must a man walk down?",
   answered: true
 };
