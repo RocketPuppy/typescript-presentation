@@ -35,6 +35,7 @@ export interface Session {
   loading: boolean;
   questioners: Questioner[];
   questions: Question[];
+  popularity: number;
 }
 
 export interface DashboardSession {
