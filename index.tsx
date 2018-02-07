@@ -19,7 +19,8 @@ const user: Self = {
 
 const questioner: Questioner = {
   id: 2,
-  type: "Questioner"
+  type: "Questioner",
+  name: "Arthur Dent"
 };
 
 const answerer: Answerer = {
