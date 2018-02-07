@@ -24,7 +24,8 @@ const questioner: Questioner = {
 
 const answerer: Answerer = {
   type: "Answerer",
-  name: "Deep thought"
+  name: "Deep thought",
+  answered_count: 4
 };
 
 const question: Question = {
