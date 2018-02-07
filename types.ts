@@ -22,7 +22,6 @@ export interface Self {
 
 export interface Question {
   id: number;
-  votes: number[];
   text: string;
   answered: boolean;
 }
