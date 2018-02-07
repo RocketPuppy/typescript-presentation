@@ -42,7 +42,8 @@ const answererSession: Session = {
   me: user,
   loading: false,
   questioners: [questioner],
-  questions: [question]
+  questions: [question],
+  popularity: 10
 };
 
 const answererDashboardSession: DashboardSession = {
