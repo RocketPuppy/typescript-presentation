@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+SCRIPTNAME=$(basename $0)
+DIRNAME=$(dirname $0)
+MODE=$1
+
+shift
+
+if ! [ -x "$(command -v nix-shell)" ]; then
+    echo 'Error: Nix is not installed.' >&2
+    echo 'Visit https://nixos.org/nix/download.html to download.' >&2
+    exit 1
+fi
+
+if [ "$MODE" = "help" -o "$MODE" = "--help" -o "$MODE" = "-h" ]; then
+    echo "Usage: $SCRIPTNAME MODE"
+    echo "Enter a shell with all dependencies required for project."
+    exit 0
+fi
+
+echo "Entering shell..."
+nix-shell --pure --add-root $DIRNAME/gc-roots/typescript-presentation.drv --indirect $DIRNAME/shell.nix "$@"

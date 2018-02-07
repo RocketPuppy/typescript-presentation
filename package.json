@@ -1,0 +1,23 @@
+{
+  "name": "typescript-presentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daniel Wilson-Thomas <daniel@mojotech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/ramda": "^0.25.17",
+    "@types/react": "^16.0.36",
+    "@types/react-router": "^4.0.21",
+    "@types/react-router-dom": "^4.2.3",
+    "prettier": "^1.10.2",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "typescript": "^2.7.1"
+  },
+  "scripts": {
+    "typecheck": "tsc --pretty --noEmit -p ./",
+    "prettier": "prettier --write *.ts *.tsx"
+  }
+}
