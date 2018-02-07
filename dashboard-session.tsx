@@ -23,6 +23,7 @@ const DashboardSession = ({
         }{" "}
         Questions Answered
       </p>
+      <span>{session.popularity}</span>
     </div>
     {showJoin && (
       <div>
