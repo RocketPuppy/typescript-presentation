@@ -15,8 +15,8 @@ const DashboardSession = ({
 }: Props) => (
   <div>
     <div>
-      <span>{session.name}</span> by
-      <span>{answerer.name}</span>
+      <span>{session.name}</span>
+      {answerer.name && <span>by {answerer.name}</span>}
       <p>
         {totals.questioners} Questioners, {totals.answeredQuestions}/{
           totals.questions
