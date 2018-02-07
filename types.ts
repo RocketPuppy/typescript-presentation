@@ -3,6 +3,7 @@ type LockedStatus = "Locked" | "Unlocked";
 export interface Answerer {
   name?: string;
   type: "Answerer";
+  answered_count: number;
 }
 
 export interface Questioner {
