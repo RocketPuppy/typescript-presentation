@@ -1,18 +1,18 @@
 type LockedStatus = "Locked" | "Unlocked";
 
 export interface Answerer {
-  nam: string;
+  name: string;
   type: "Answerer";
 }
 
 export interface Questioner {
   id: number;
-  nam: string;
+  name: string;
   type: "Questioner";
 }
 
 export interface Self {
-  nam: string;
+  name: string;
   type: "Questioner" | "Answerer";
   id: number;
   answererSessions: number[];
