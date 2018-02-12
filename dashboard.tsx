@@ -3,6 +3,7 @@ import { DashboardSession, Self, Session } from "./types";
 import SessionC from "./dashboard-session";
 import Heading from "./dashboard-heading";
 import { isSignedIn } from "./user-utils";
+import NameTag from "./name-tag";
 
 interface SessionProps {
   sessions: DashboardSession[];
@@ -38,6 +39,7 @@ const Dashboard = ({
   joinSession
 }: DashboardProps) => (
   <div>
+    {user && <NameTag {...user} />}
     <Heading user={user} />
     {loading && <p>"Loading..."</p>}
     {answererSessions.length > 0 && (

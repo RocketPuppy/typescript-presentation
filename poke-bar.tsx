@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Questioner, Answerer } from "./types";
+import NameTag from "./name-tag";
 
 interface Props<UserType> {
   user: UserType;
@@ -13,7 +14,8 @@ export default class PokeBar<
     const { poke, user } = this.props;
     return (
       <div>
-        <button onClick={() => poke(user)}>Poke {user.name}</button>
+        <NameTag {...user} />
+        <button onClick={() => poke(user)}>Poke</button>
       </div>
     );
   }

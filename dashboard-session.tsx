@@ -1,6 +1,7 @@
 import * as React from "react";
 import { DashboardSession, Session } from "./types";
 import { QuestionerPokeBar, AnswererPokeBar } from "./poke-bar";
+import NameTag from "./name-tag";
 
 interface Props extends DashboardSession {
   showJoin?: boolean;
@@ -17,7 +18,11 @@ const DashboardSession = ({
   <div>
     <div>
       <span>{session.name}</span>
-      {answerer.name && <span>by {answerer.name}</span>}
+      {answerer.name && (
+        <span>
+          by <NameTag {...answerer} />
+        </span>
+      )}
       <p>
         {totals.questioners} Questioners, {totals.answeredQuestions}/{
           totals.questions
