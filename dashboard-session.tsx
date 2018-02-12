@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DashboardSession, Session } from "./types";
+import LockedIcon from "./locked-icon";
 
 interface Props extends DashboardSession {
   showJoin?: boolean;
@@ -23,6 +24,7 @@ const DashboardSession = ({
         }{" "}
         Questions Answered
       </p>
+      <LockedIcon lockedStatus={session.locked} />
     </div>
     {showJoin && (
       <div>

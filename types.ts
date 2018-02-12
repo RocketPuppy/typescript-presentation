@@ -1,4 +1,4 @@
-type LockedStatus = "Locked" | "Unlocked";
+export type LockedStatus = "Locked" | "Unlocked";
 
 export interface Answerer {
   name?: string;
