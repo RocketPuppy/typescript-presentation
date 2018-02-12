@@ -15,6 +15,8 @@ const LockedIcon = ({ lockedStatus }: Props) => {
       return <i className="icon-padlock" />;
     case "Unlocked":
       return <i className="icon-padlock-open" />;
+    case "Pending":
+      return <i className="icon-spinner" />;
     default:
       return assertNever(lockedStatus);
   }
