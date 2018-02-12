@@ -1,6 +1,13 @@
 import * as React from "react";
 import Dashboard from "./dashboard";
-import { Self, DashboardSession, Session, Question, Questioner, Answerer } from "./types";
+import {
+  Self,
+  DashboardSession,
+  Session,
+  Question,
+  Questioner,
+  Answerer
+} from "./types";
 
 const user: Self = {
   type: "Answerer",
@@ -48,9 +55,10 @@ const answererDashboardSession: DashboardSession = {
   }
 };
 
-const joinSession = (session: Session): Promise<Session> => new Promise(() => session);
+const joinSession = (session: Session): Promise<Session> =>
+  new Promise(() => session);
 
-const Main = () =>
+const Main = () => (
   <Dashboard
     answererSessions={[answererDashboardSession]}
     questionerSessions={[]}
@@ -58,6 +66,7 @@ const Main = () =>
     loading={false}
     user={user}
     joinSession={joinSession}
-    />;
+  />
+);
 
 export default Main;
