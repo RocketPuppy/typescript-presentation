@@ -13,7 +13,7 @@ interface SessionProps {
 const SessionList = ({ sessions, joinSession, showJoin }: SessionProps) => (
   <ul>
     {sessions.map(session => (
-      <li key={session.session.id}>
+      <li key={session.sesion.id}>
         <SessionC {...session} joinSession={joinSession} showJoin={showJoin} />
       </li>
     ))}
