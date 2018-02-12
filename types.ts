@@ -1,5 +1,3 @@
-export type LockedStatus = "Locked" | "Unlocked" | "Pending";
-
 export interface Answerer {
   name?: string;
   type: "Answerer";
@@ -29,7 +27,7 @@ export interface Question {
 export interface Session {
   id: number;
   name: string;
-  locked: LockedStatus;
+  locked: string;
   me?: Self;
   answerer?: Answerer;
   loading: boolean;

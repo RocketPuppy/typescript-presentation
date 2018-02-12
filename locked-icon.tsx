@@ -1,12 +1,11 @@
 import * as React from "react";
-import { LockedStatus } from "./types";
 
 function assertNever(x: never): never {
   throw new Error("Unexpected object: " + x);
 }
 
 interface Props {
-  lockedStatus: LockedStatus;
+  lockedStatus: string;
 }
 
 const LockedIcon = ({ lockedStatus }: Props) => {
