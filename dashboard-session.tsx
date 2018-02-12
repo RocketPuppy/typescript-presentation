@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DashboardSession, Session } from "./types";
+import { QuestionerPokeBar, AnswererPokeBar } from "./poke-bar";
 
 interface Props extends DashboardSession {
   showJoin?: boolean;
@@ -23,6 +24,21 @@ const DashboardSession = ({
         }{" "}
         Questions Answered
       </p>
+      <div>
+        <h1>Poke Users!</h1>
+        {session.answerer && (
+          <AnswererPokeBar
+            user={session.answerer}
+            poke={u => alert("Poked answerer " + u.name)}
+          />
+        )}
+        {session.questioners.map(q => (
+          <QuestionerPokeBar
+            user={q}
+            poke={u => alert("Poked questioner " + u.id)}
+          />
+        ))}
+      </div>
     </div>
     {showJoin && (
       <div>
