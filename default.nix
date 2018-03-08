@@ -19,6 +19,7 @@ nixpkgs.stdenv.mkDerivation {
     cd $src
     yarn
     export PATH=$src/node_modules/.bin:$PATH
+    alias tc="yarn typecheck"
   '';
 }
 
